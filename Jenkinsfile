@@ -1,6 +1,13 @@
-node('maven-jdk-8') {
-  stage 'Build and Verify'
-  checkout scm
-  sh 'mvn verify'
-  }
+pipeline
+{
+  agent none
+  stages {
+    stage('Build') {
+      agent { dockerfile { filename 'Dockerfile.build'
+        label 'docker'}
+        
+       sh 'echo X; ls -la $HOME; echo ;'
+        }   
 
+  }
+}
