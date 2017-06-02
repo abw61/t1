@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sh \'echo X; ls -la /; echo Y;\''
+        sh '''echo X
+ls -la /
+echo Y'''
       }
     }
   }
