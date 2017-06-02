@@ -1,16 +1,13 @@
 pipeline
 {
-  agent none
-  stages {
-    stage('Build') {
-      agent { dockerfile
+ agent { dockerfile
           { filename 'Dockerfile.build'
             label 'docker'
           }
-        
-          sh 'echo X; ls -la $HOME; echo ;'
+  }
+  stages {
+    stage('Build') {     
+                  sh 'echo X; ls -la $HOME; echo ;'
     }   
-    }
-
   }
 }
