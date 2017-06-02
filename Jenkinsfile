@@ -7,7 +7,9 @@ pipeline
   }
   stages {
     stage('Build') {     
-                  sh 'echo X; ls -la $HOME; echo ;'
+         step {
+           sh 'echo X; ls -la $HOME; echo ;'
+           }
     }   
   }
 }
