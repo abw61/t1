@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sh \'echo X; ls -la $HOME; echo Y;\''
+        sh 'sh \'echo X; ls -la /; echo Y;\''
       }
     }
   }
