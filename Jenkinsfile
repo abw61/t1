@@ -7,4 +7,4 @@ node('maven-jdk-8') {
   echo "$short_commit"
   sh 'mvn verify'
   }
-Contact GitHub API Training Shop Blog About
+
